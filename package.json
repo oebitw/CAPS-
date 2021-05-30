@@ -1,0 +1,28 @@
+{
+  "name": "CAPS-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose  --coverage",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oebitw/CAPS-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oebitw/CAPS-/issues"
+  },
+  "homepage": "https://github.com/oebitw/CAPS-#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "faker": "^5.5.3"
+  },
+  "devDependencies": {
+    "jest": "^27.0.3"
+  }
+}
