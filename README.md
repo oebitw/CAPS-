@@ -5,9 +5,9 @@ CAPS Phase 1: Begin the build of an application for a company called CAPS - The 
 Tactically, this will be an event driven application that “distributes” the responsibility for logging to separate modules, using only events to trigger logging based on activity.
 
 ## Author: Omar Ewies
-* [Tests Report]()
+* [Tests Report](https://github.com/oebitw/CAPS-/actions)
 
-* [Pull Request]()
+* [Pull Request](https://github.com/oebitw/CAPS-/pull/1)
 
 ## Setup
 
