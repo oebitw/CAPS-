@@ -19,8 +19,6 @@ Tactically, this will be an event driven application that “distributes” the 
 ## Test
 * npm test
 
-![](./img/caps-test.JPG)
-
 ## Run the app
 * node index.js
 
