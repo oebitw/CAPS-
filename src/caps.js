@@ -16,3 +16,10 @@ event.on('pickup', driver.pickUp );
 event.on('inTransit', driver.delivered);
 event.on('delivered', vendor.gratitude);
 
+////////////////////////////////////////////
+////// simulate a new customer order //////
+//////////////////////////////////////////
+
+setInterval(() => {
+  vendor.newOrder();
+}, 5000);

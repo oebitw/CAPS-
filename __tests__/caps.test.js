@@ -11,7 +11,8 @@ const faker = require('faker');
 /////////////////
 
 
-const vendor = require('../src/vendor.js');
+const newOrder = require('../src/vendor.js').newOrder;
+const thanks = require('../src/vendor.js').gratitude;
 const driver = require('../src/driver.js');
 
 /////////////////////
@@ -29,7 +30,7 @@ describe('Test The App', () => {
     customer: faker.name.findName(),
     address: `${faker.address.city()}, ${faker.address.stateAbbr()}`,
   };
-  
+
   let payload = {
     event: 'pickup',
     time: new Date().toISOString(),
@@ -47,9 +48,10 @@ describe('Test The App', () => {
   });
   
   it('Test initiating new order', () => {
-    vendor.newOrder();
+    newOrder();
     expect(consoleSpy).toHaveBeenCalled();
   });
+
   it('Test Driver pickup order after 1 second', async () => {
     driver.pickUp(payload);
     setTimeout(() => {
@@ -66,16 +68,8 @@ describe('Test The App', () => {
     }, 3000);
   });
 
-  it('Test Driver Deliver the order', async () => {
-    driver.delivered(payload);
-    setTimeout(() => {
-      expect(consoleSpy).toHaveBeenCalled();
-      expect(consoleSpy).toHaveBeenLastCalledWith(expect.any(Function), 3000);        
-    }, 3000);
-  });
-
   it('Test Thanking the driver', async () => {
-    vendor.gratitude(payload);
+    thanks(payload);
     setTimeout(() => {
       expect(consoleSpy).toHaveBeenCalled();
       expect(consoleSpy).toHaveBeenLastCalledWith(expect.any(Function), 3000);        
